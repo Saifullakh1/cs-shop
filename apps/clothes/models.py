@@ -3,9 +3,9 @@ from django.db import models
 
 class Clothes(models.Model):
     class Currency(models.TextChoices):
-        som = "som"
-        dollar = "dollar"
-        euro = "euro"
+        som = "C"
+        dollar = "$"
+        euro = "€"
 
     class Size(models.TextChoices):
         m = "M"
@@ -26,6 +26,9 @@ class Clothes(models.Model):
     )
     price = models.IntegerField(
         default=0, verbose_name="Цена"
+    )
+    old_price = models.IntegerField(
+        default=0, verbose_name="Старая цена"
     )
     currency = models.CharField(
         max_length=150, choices=Currency.choices,
