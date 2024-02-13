@@ -1,4 +1,5 @@
 from django.db import models
+from apps.categories.models import Category
 
 
 class Clothes(models.Model):
@@ -36,6 +37,10 @@ class Clothes(models.Model):
     )
     is_active = models.BooleanField(
         default=True, verbose_name="Активный"
+    )
+    category = models.ForeignKey(
+        Category, on_delete=models.CASCADE,
+        related_name="cloth_category", verbose_name="Категория"
     )
 
     class Meta:
