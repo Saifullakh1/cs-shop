@@ -1,0 +1,8 @@
+<form method="post" action="{% url 'cart-create' %}">
+    {% csrf_token %}
+    <input type="hidden" name="clothes_id" value="{{ clothes.id }}"/>
+
+    <button class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i> Add To
+        Cart
+    </button>
+</form>

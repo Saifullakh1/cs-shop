@@ -51,6 +51,9 @@
                         <button class="dropdown-item" type="button">RU</button>
                     </div>
                 </div>
+                {% if user.is_authenticated %}
+                <a href="{% url 'create-clothes' %}" class="btn btn-primary">Create</a>
+                {% endif %}
             </div>
             <div class="d-inline-flex align-items-center d-block d-lg-none">
                 <a href="" class="btn px-0 ml-2">
