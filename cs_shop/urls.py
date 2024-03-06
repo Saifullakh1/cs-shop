@@ -22,7 +22,9 @@ from django.conf import settings
 
 api_urlpatterns = [
     path('', include('apps.clothes.api.urls')),
-    path('', include('apps.categories.api.urls'))
+    path('', include('apps.categories.api.urls')),
+    path('', include('apps.carts.api.urls')),
+    path('', include('apps.users.api.urls'))
 ]
 
 urlpatterns = [
